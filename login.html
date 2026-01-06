@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login — smarty</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container" style="padding:4rem 2rem; max-width:420px;">
+    <h2 style="margin-bottom:1rem;">Login</h2>
+    <form id="loginForm">
+      <label style="display:block;margin-bottom:.5rem;">Email</label>
+      <input type="email" name="email" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid #e6e9f2;margin-bottom:1rem;">
+      <label style="display:block;margin-bottom:.5rem;">Password</label>
+      <input type="password" name="password" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid #e6e9f2;margin-bottom:1rem;">
+      <button class="btn btn-primary" type="submit">Log in</button>
+      <p style="margin-top:1rem;">Don't have an account? <a href="register.html">Register</a></p>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      // Simple client-side "login" — no backend
+      const email = this.email.value;
+      alert('Logged in as ' + email);
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
